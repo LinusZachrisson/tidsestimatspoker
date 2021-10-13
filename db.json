@@ -1,11 +1,25 @@
 {
-    "issue":[
-        {
-            "id": 1,
-            "header": "Rubrik",
-            "description": "Förklarande text angående issuet",
-            "done": false,
-            "hours": [2, 4, 3, 7, 9, 5]
-        }
-    ]
+  "issue": [
+    {
+      "id": 1,
+      "header": "Rubrik",
+      "description": "Förklarande text angående issuet",
+      "done": false,
+      "hours": [2, 4, 3, 7, 9, 5]
+    },
+    {
+      "id": 2,
+      "header": "Rubrik2",
+      "description": "Förklarande text angående issuet",
+      "done": false,
+      "hours": [2, 4, 3, 7, 9, 5]
+    },
+    {
+      "id": 3,
+      "header": "Rubrik3",
+      "description": "Förklarande text angående issuet",
+      "done": false,
+      "hours": [2, 4, 3, 7, 9, 5]
+    }
+  ]
 }
