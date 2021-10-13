@@ -1,19 +1,7 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+    "issueId": 1,
+    "header": "Rubrik",
+    "description": "Förklarande text angående issuet",
+    "done": false,
+    "hours": [2, 4, 3, 7, 9, 5]
 }
