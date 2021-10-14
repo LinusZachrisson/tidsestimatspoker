@@ -6,6 +6,20 @@
             "description": "Förklarande text angående issuet",
             "done": false,
             "hours": [2, 4, 3, 7, 9, 5]
+        },
+        {
+            "id": 1,
+            "header": "Rubrik",
+            "description": "Förklarande text angående issuet",
+            "done": false,
+            "hours": [2, 4, 3, 7]
+        },
+        {
+            "id": 1,
+            "header": "Rubrik",
+            "description": "Förklarande text angående issuet",
+            "done": false,
+            "hours": [2, 3, 3, 10, 9, 15]
         }
     ]
 }
