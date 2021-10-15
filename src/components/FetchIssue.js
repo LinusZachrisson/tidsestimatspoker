@@ -1,14 +1,4 @@
 function FetchIssue(number) {
-    /*Send in the number of the issue you want to get, maybe*/
-
-    // let contents={
-    //     "issueId": 1,
-    //     "header": "Rubrik",
-    //     "description": "Förklarande text angående issuet",
-    //     "done": false,
-    //     "votes": [2, 4, 3, 7, 9, 5,10,15,3]
-    // }
-
     // Hämtar issues som är färdigissade från TimeEstimated
     let contents = number.issue;
 
@@ -23,7 +13,7 @@ function FetchIssue(number) {
             All votes:{' '}
             <ul>
                 {sorted.map((vote) => (
-                    <li> {vote} </li>
+                    <li> {vote} h</li>
                 ))}
             </ul>{' '}
             <br />

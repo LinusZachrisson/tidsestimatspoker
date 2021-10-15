@@ -1,0 +1,115 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    min-width: 850px;
+    overflow: scroll;
+}
+
+/* STARTPAGE */
+.startpage-container {
+    width: 100%;
+    display: flex;
+    align-self: center;
+}
+.users-container {
+    height: 360px;
+    width: 300px;
+    display: inline-block;
+    margin: 70px auto;
+    border: 1px solid rgb(176, 176, 176);
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgb(145, 145, 145);
+}
+.users-container ul {
+    margin: 0px;
+    padding: 0px;
+}
+.users-container li {
+    list-style: none;
+    margin: 16px 15px;
+    padding: 10px;
+    border: 1px solid rgb(165, 165, 165);
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px rgb(145, 145, 145);
+}
+
+/* MAIN CONTENT, ISSUES */
+.content-container {
+    display: flex;
+    justify-content: space-between;
+}
+.left-container {
+    width: 65%;
+}
+.right-container {
+    width: 35%;
+}
+.issue-box {
+    margin: 30px;
+    padding: 20px;
+    border: 1px solid rgb(177, 177, 177);
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgb(181, 181, 181);
+}
+.issue-box h1 {
+    margin: 0;
+    font-size: 25px;
+}
+.issue-box h3 {
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0;
+}
+.issue-box p {
+    margin: 0;
+}
+.time-container {
+    display: flex;
+    justify-content: space-between;
+}
+.time-container input {
+    width: 30px;
+}
+.time-container button {
+    padding: 7px 15px;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: 0;
+    background-color: rgb(48, 48, 48);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 4px #777;
+}
+.time-container button:hover {
+    background-color: rgb(101, 101, 101);
+}
+
+/* MAIN CONTENT, NEW ISSUE */
+.newissue-container {
+    height: 200px;
+    margin: 30px 15px;
+    padding: 20px;
+    border: 1px solid rgb(177, 177, 177);
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgb(181, 181, 181);
+}
+.newissue-container input {
+    width: 90%;
+    margin: 5px auto;
+}
+.newissue-container button {
+    margin-top: 30px;
+    padding: 7px 15px;
+    border-radius: 5px;
+    border: 0;
+    background-color: rgb(48, 48, 48);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 4px #777;
+}
+.newissue-container button:hover {
+    background-color: rgb(101, 101, 101);
+}

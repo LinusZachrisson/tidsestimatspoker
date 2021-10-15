@@ -39,27 +39,29 @@ function NewIssue() {
     };
 
     return (
-        <section>
-            <h1>Nytt Issue</h1>
-            <form onSubmit={onSubmit}>
-                <input
-                    type='text'
-                    placeholder='Rubrik'
-                    name='header'
-                    onChange={onChangeH}
-                    value={header}
-                />
-                <br />
-                <input
-                    type='text'
-                    placeholder='Kommentar'
-                    name='text'
-                    onChange={onChangeT}
-                    value={text}
-                />
-                <br />
-                <button type='submit'>Lägg till</button>
-            </form>
+        <section className='right-container'>
+            <div className='newissue-container'>
+                <h1>Nytt Issue</h1>
+                <form onSubmit={onSubmit}>
+                    <input
+                        type='text'
+                        placeholder='Rubrik'
+                        name='header'
+                        onChange={onChangeH}
+                        value={header}
+                    />
+                    <br />
+                    <input
+                        type='text'
+                        placeholder='Beskrivning'
+                        name='text'
+                        onChange={onChangeT}
+                        value={text}
+                    />
+                    <br />
+                    <button type='submit'>Lägg till</button>
+                </form>
+            </div>
         </section>
     );
 }

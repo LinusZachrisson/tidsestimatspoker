@@ -28,28 +28,34 @@ function AddedIssue(props) {
     };
 
     return (
-        <div>
-            <div>
+        <div className='left-container'>
+            <div className='issues-container'>
                 {issues &&
                     issues.map((issue) => {
                         if (issue.done === false) {
                             return (
-                                <div key={issue.id}>
-                                    Rubrik: {issue.header} <br />
-                                    Beskrivning: {issue.description} <br />
+                                <div key={issue.id} className='issue-box'>
+                                    <h1>{issue.header} </h1>
+                                    <br />
+                                    <h3>{issue.description} </h3>
+                                    <br />
                                     {issue.hours.length === 6 ? (
                                         <FetchIssue issue={issue} />
                                     ) : (
-                                        <div>
-                                            Din tidsestimering:{' '}
-                                            <input
-                                                type='number'
-                                                onChange={onChange}
-                                            />{' '}
-                                            timmar
-                                            <button onClick={onClick}>
-                                                Spara
-                                            </button>
+                                        <div className='time-container'>
+                                            <p>
+                                                Din tidsestimering:{' '}
+                                                <input
+                                                    type='number'
+                                                    onChange={onChange}
+                                                />{' '}
+                                                timmar
+                                            </p>
+                                            <div>
+                                                <button onClick={onClick}>
+                                                    Spara
+                                                </button>
+                                            </div>
                                         </div>
                                     )}
                                 </div>

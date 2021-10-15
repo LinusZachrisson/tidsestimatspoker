@@ -1,4 +1,4 @@
-import './App.css';
+import './css/style.css';
 import FirstPage from './components/FirstPage';
 import AddedIssue from './components/AddedIssue';
 import NewIssue from './components/NewIssue';
@@ -12,7 +12,7 @@ function App() {
             {user === null ? (
                 <FirstPage sendId={(id) => setUser(id)} />
             ) : (
-                <div>
+                <div className='content-container'>
                     <AddedIssue />
                     <NewIssue />
                 </div>
