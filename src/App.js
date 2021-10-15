@@ -1,21 +1,24 @@
-
 import './App.css';
 import FirstPage from './components/FirstPage';
-import React, {useState} from "react"
+import AddedIssue from './components/AddedIssue';
+import NewIssue from './components/NewIssue';
+import React, { useState } from 'react';
 
 function App() {
+    const [user, setUser] = useState(null);
 
-  const [user, setUser] = useState(null);
-
-  return (
-
-    <div>
-      {user === null ? (
-        <FirstPage sendId={(id) => setUser(id)}/>) : (<div>hej </div>)
-      }
-    
-    </div>
-  );
+    return (
+        <div>
+            {user === null ? (
+                <FirstPage sendId={(id) => setUser(id)} />
+            ) : (
+                <div>
+                    <AddedIssue />
+                    <NewIssue />
+                </div>
+            )}
+        </div>
+    );
 }
 
 export default App;
