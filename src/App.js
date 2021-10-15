@@ -1,11 +1,19 @@
-import logo from "./logo.svg";
-import "./App.css";
-import AddedIssue from "./components/AddedIssue";
+
+import './App.css';
+import FirstPage from './components/FirstPage';
+import React, {useState} from "react"
 
 function App() {
+
+  const [user, setUser] = useState(null);
+
   return (
-    <div className="App">
-      <AddedIssue />
+
+    <div>
+      {user === null ? (
+        <FirstPage sendId={(id) => setUser(id)}/>) : (<div>hej </div>)
+      }
+    
     </div>
   );
 }
