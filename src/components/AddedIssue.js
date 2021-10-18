@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import FetchIssue from './FetchIssue';
 
-function AddedIssue({user}) {
+const AddedIssue= ({ user, update }) => {
     const [issues, setIssues] = useState(null);
     const [hours, setHours] = useState(0);
 
     useEffect(() => {
         fetchIssues();
-    }, []);
+    },[update]);
 
     const fetchIssues = () => {
         fetch(`http://localhost:5000/issue`)
