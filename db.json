@@ -1,86 +1,139 @@
 {
-    "issue": [
-        {
-            "id": 1,
-            "header": "Rubrik",
-            "description": "Förklarande text angående issuet",
-            "done": false,
-            "hours": [2, 4, 3, 7]
-        },
-        {
-            "id": 2,
-            "header": "Rubrik",
-            "description": "Förklarande text angående issuet",
-            "done": false,
-            "hours": [2, 4, 3, 7, 9, 5]
-        },
-        {
-            "id": 3,
-            "header": "Rubrik",
-            "description": "Förklarande text angående issuet",
-            "done": false,
-            "hours": [2, 4, 3, 7, 9, 5]
-        },
-        {
-            "id": 14,
-            "header": "Rubrik",
-            "description": "Förklarande text angående issuet",
-            "done": false,
-            "hours": [2, 4, 3, 7, 9, 5]
-        },
-        {
-            "id": 5,
-            "header": "Rubrik",
-            "description": "Förklarande text angående issuet",
-            "done": false,
-            "hours": [2, 4, 3, 7, 9, 5]
-        },
-        {
-            "id": 6,
-            "header": "Rubrik",
-            "description": "Förklarande text angående issuet",
-            "done": false,
-            "hours": [2, 4, 3, 7, 9, 5]
-        },
-        {
-            "id": 7,
-            "header": "Rubrik",
-            "description": "Förklarande text angående issuet",
-            "done": false,
-            "hours": [2, 4, 3, 7, 9, 5]
-        }
-    ],
-
-    "users": [
-        {
-            "id": 1,
-            "firstname": "Durre shewar",
-            "lastname": "Malik"
-        },
-        {
-            "id": 2,
-            "firstname": "Toni",
-            "lastname": "Halmetoja"
-        },
-        {
-            "id": 3,
-            "firstname": "Johannes",
-            "lastname": "Fjellborg"
-        },
-        {
-            "id": 4,
-            "firstname": "Mathilda",
-            "lastname": "Pettersson"
-        },
-        {
-            "id": 5,
-            "firstname": "Judith",
-            "lastname": "Gammelli"
-        },
-        {
-            "id": 6,
-            "firstname": "Linus",
-            "lastname": "Zachrisson"
-        }
-    ]
+  "issue": [
+    {
+      "id": 1,
+      "header": "Rubrik",
+      "description": "Förklarande text angående issuet",
+      "done": false,
+      "hours": [
+        2,
+        4,
+        3,
+        7
+      ]
+    },
+    {
+      "id": 2,
+      "header": "Rubrik",
+      "description": "Förklarande text angående issuet",
+      "done": false,
+      "hours": [
+        2,
+        4,
+        3,
+        7,
+        9,
+        5
+      ]
+    },
+    {
+      "id": 3,
+      "header": "Rubrik",
+      "description": "Förklarande text angående issuet",
+      "done": false,
+      "hours": [
+        2,
+        4,
+        3,
+        7,
+        9,
+        5
+      ]
+    },
+    {
+      "id": 14,
+      "header": "Rubrik",
+      "description": "Förklarande text angående issuet",
+      "done": false,
+      "hours": [
+        2,
+        4,
+        3,
+        7,
+        9,
+        5
+      ]
+    },
+    {
+      "id": 5,
+      "header": "Rubrik",
+      "description": "Förklarande text angående issuet",
+      "done": false,
+      "hours": [
+        2,
+        4,
+        3,
+        7,
+        9,
+        5
+      ]
+    },
+    {
+      "id": 6,
+      "header": "Rubrik",
+      "description": "Förklarande text angående issuet",
+      "done": false,
+      "hours": [
+        2,
+        4,
+        3,
+        7,
+        9,
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "header": "Rubrik",
+      "description": "Förklarande text angående issuet",
+      "done": false,
+      "hours": [
+        2,
+        4,
+        3,
+        7,
+        9,
+        5
+      ]
+    },
+    {
+      "id": "iOWNHgCp7IXM7zC0",
+      "header": "test",
+      "description": "testtest",
+      "done": false,
+      "hours": 9
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstname": "Durre shewar",
+      "lastname": "Malik"
+    },
+    {
+      "id": 2,
+      "firstname": "Toni",
+      "lastname": "Halmetoja"
+    },
+    {
+      "id": 3,
+      "firstname": "Johannes",
+      "lastname": "Fjellborg"
+    },
+    {
+      "id": 4,
+      "firstname": "Mathilda",
+      "lastname": "Pettersson"
+    },
+    {
+      "id": 5,
+      "firstname": "Judith",
+      "lastname": "Gammelli"
+    },
+    {
+      "id": 6,
+      "firstname": "Linus",
+      "lastname": "Zachrisson"
+    }
+  ]
 }

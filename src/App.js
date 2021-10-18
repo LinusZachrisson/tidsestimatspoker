@@ -13,7 +13,7 @@ function App() {
                 <FirstPage sendId={(id) => setUser(id)} />
             ) : (
                 <div className='content-container'>
-                    <AddedIssue />
+                    <AddedIssue user={user} />
                     <NewIssue />
                 </div>
             )}

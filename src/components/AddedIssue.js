@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import FetchIssue from './FetchIssue';
 
-function AddedIssue(props) {
+function AddedIssue({user}) {
     const [issues, setIssues] = useState(null);
     const [hours, setHours] = useState(0);
 
@@ -23,8 +23,22 @@ function AddedIssue(props) {
         console.log(hours);
     };
 
-    const onClick = () => {
+    const onClick = (e) => {
         console.log('klick', hours);
+        let issueId = e.target.parentNode.id;
+
+        fetch('http://localhost:5000/issue/'+ issueId, {
+            method: 'PATCH',
+            body: JSON.stringify({
+            hours: issues.push([hours])
+        }),
+            headers: {
+            'Content-type': 'application/json'}
+        })
+        .then(response => response.json())
+        .then(data => {
+
+        });
     };
 
     return (
@@ -34,7 +48,7 @@ function AddedIssue(props) {
                     issues.map((issue) => {
                         if (issue.done === false) {
                             return (
-                                <div key={issue.id} className='issue-box'>
+                                <div key={issue.id} id={issue.id} className='issue-box'>
                                     <h1>{issue.header} </h1>
                                     <br />
                                     <h3>{issue.description} </h3>
@@ -51,7 +65,7 @@ function AddedIssue(props) {
                                                 />{' '}
                                                 timmar
                                             </p>
-                                            <div>
+                                            <div key={issue.id} id={issue.id}>
                                                 <button onClick={onClick}>
                                                     Spara
                                                 </button>
