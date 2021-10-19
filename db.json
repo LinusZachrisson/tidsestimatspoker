@@ -122,9 +122,21 @@
       "header": "test4",
       "description": "test4",
       "done": false,
-      "hours": [
+      "voted": [
+        5,
+        4,
         1,
-        4
+        2,
+        3,
+        6
+      ],
+      "hours": [
+        2,
+        3,
+        3,
+        3,
+        4,
+        2
       ]
     }
   ],

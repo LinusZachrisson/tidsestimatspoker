@@ -28,18 +28,33 @@ const AddedIssue= ({ user, update }) => {
         let hour = parseInt(hours);
         let issueId = e.target.parentNode.id;
         let hoursArray;
+        let votedArray;
         
         for (let issue in issues) {
             if (issueId === issues[issue].id) {
+                votedArray = issues[issue].voted;
                 hoursArray = issues[issue].hours;
-                hoursArray.push(hour);
+                console.log(votedArray);
+
+                if(!votedArray.includes(parseInt(user)) || votedArray.length === 0){
+                    hoursArray.push(hour);
+    
+                    votedArray.push(parseInt(user));
+                    console.log("voted");
+                }
+                else{
+                    console.log("hello");
+                }
+
+                
             }
         }
 
         fetch('http://localhost:5000/issue/'+ issueId, {
             method: 'PATCH',
             body: JSON.stringify({
-            hours: hoursArray
+            hours: hoursArray,
+            voted: votedArray
         }),
             headers: {
             'Content-type': 'application/json'}
