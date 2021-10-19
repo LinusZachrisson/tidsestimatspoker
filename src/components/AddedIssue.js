@@ -25,12 +25,21 @@ const AddedIssue= ({ user, update }) => {
 
     const onClick = (e) => {
         console.log('klick', hours);
+        let hour = parseInt(hours);
         let issueId = e.target.parentNode.id;
+        let hoursArray;
+        
+        for (let issue in issues) {
+            if (issueId === issues[issue].id) {
+                hoursArray = issues[issue].hours;
+                hoursArray.push(hour);
+            }
+        }
 
         fetch('http://localhost:5000/issue/'+ issueId, {
             method: 'PATCH',
             body: JSON.stringify({
-            hours: issues.push([hours])
+            hours: hoursArray
         }),
             headers: {
             'Content-type': 'application/json'}
