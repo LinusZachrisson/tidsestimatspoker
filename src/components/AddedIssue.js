@@ -48,6 +48,7 @@ const AddedIssue= ({ user, update }) => {
         .then(data => {
 
         });
+        
     };
 
     return (
