@@ -103,7 +103,6 @@ body {
 
 /* MAIN CONTENT, NEW ISSUE */
 .newissue-container {
-  height: 200px;
   margin: 30px 15px;
   padding: 20px;
   border: 1px solid rgb(177, 177, 177);
@@ -128,4 +127,21 @@ body {
 }
 .newissue-container button:hover {
   background-color: rgb(101, 101, 101);
+}
+
+/* HEADINGS */
+.container-heading,
+.newissue-heading {
+  font-size: 32px;
+  margin: 30px;
+  padding: 20px;
+  border: 1px solid rgb(177, 177, 177);
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px rgb(181, 181, 181);
+  color: white;
+  background-color: rgb(48, 48, 48);
+}
+
+.newissue-heading {
+  margin: 30px 15px;
 }

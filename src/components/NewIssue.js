@@ -40,8 +40,8 @@ const NewIssue = ({ handleUpdate }) => {
 
   return (
     <section className="right-container">
+      <h1 className="newissue-heading">Nytt issue</h1>
       <div className="newissue-container">
-        <h1>Nytt Issue</h1>
         <form onSubmit={onSubmit}>
           <input
             type="text"
