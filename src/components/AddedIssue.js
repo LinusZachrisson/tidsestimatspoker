@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import FetchIssue from './FetchIssue';
 
-function AddedIssue({user}) {
+const AddedIssue= ({ user, update }) => {
     const [issues, setIssues] = useState(null);
     const [hours, setHours] = useState(0);
 
     useEffect(() => {
         fetchIssues();
-    }, []);
+    },[update]);
 
     const fetchIssues = () => {
         fetch(`http://localhost:5000/issue`)
@@ -25,12 +25,21 @@ function AddedIssue({user}) {
 
     const onClick = (e) => {
         console.log('klick', hours);
+        let hour = parseInt(hours);
         let issueId = e.target.parentNode.id;
+        let hoursArray;
+        
+        for (let issue in issues) {
+            if (issueId === issues[issue].id) {
+                hoursArray = issues[issue].hours;
+                hoursArray.push(hour);
+            }
+        }
 
         fetch('http://localhost:5000/issue/'+ issueId, {
             method: 'PATCH',
             body: JSON.stringify({
-            hours: issues.push([hours])
+            hours: hoursArray
         }),
             headers: {
             'Content-type': 'application/json'}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 var rand = require('random-key');
 
-function NewIssue() {
+const NewIssue = ({handleUpdate}) => {
     let [header, setHeader] = useState('');
     let [text, setText] = useState('');
 
@@ -16,7 +16,6 @@ function NewIssue() {
             hours: [],
         };
 
-        console.log(newIssue);
         fetch('http://localhost:5000/issue', {
             method: 'POST',
             headers: { 'Content-type': 'application/json' },
@@ -28,6 +27,7 @@ function NewIssue() {
 
         setHeader('');
         setText('');
+        handleUpdate(newIssue);
     };
 
     const onChangeH = (e) => {

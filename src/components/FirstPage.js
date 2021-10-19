@@ -7,7 +7,6 @@ const FirstPage = ({ sendId }) => {
         fetch('http://localhost:5000/users')
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
                 setUsers(data);
             })
             .catch((error) => {
@@ -17,7 +16,6 @@ const FirstPage = ({ sendId }) => {
 
     const logIn = (e) => {
         e.preventDefault();
-        console.log(e.target.id);
         sendId(e.target.id);
     };
 
