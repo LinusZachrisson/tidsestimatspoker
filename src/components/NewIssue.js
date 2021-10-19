@@ -13,6 +13,7 @@ const NewIssue = ({handleUpdate}) => {
             header: header,
             description: text,
             done: false,
+            voted: [],
             hours: [],
         };
 
