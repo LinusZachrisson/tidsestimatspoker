@@ -26,6 +26,15 @@ const FinishedIssues = ({ update, handleUpdate }) => {
       });
   };
 
+  console.log(issues);
+  let time;
+  for (let issue in issues) {
+    const sum = issues[issue].hours.reduce((a, b) => a + b, 0);
+    const sumb = issues[issue].actualTime.reduce((a, b) => a + b, 0);
+  
+    time = sum - sumb;
+  }
+
 
   return (
     <div className="finished-issue-container">
@@ -39,6 +48,8 @@ const FinishedIssues = ({ update, handleUpdate }) => {
               <h3>{issue.description}</h3>
               <div>
                 <FetchIssue issue={issue} />
+                
+                Time difference: {time} 
                 <button id={issue.id} onClick={onDelete}>
                   Radera
                 </button>
