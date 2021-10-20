@@ -94,6 +94,7 @@ const AddedIssue = ({ user, update, handleUpdate }) => {
 
   return (
     <div className="left-container">
+      <h1 className="container-heading">Pågående issues</h1>
       <div className="issues-container">
         {issues &&
           issues.map((issue) => {

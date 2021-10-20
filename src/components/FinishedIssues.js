@@ -28,6 +28,7 @@ const FinishedIssues = ({ update, handleUpdate }) => {
 
   return (
     <div className="finished-issue-container">
+      <h1 className="container-heading">Slutförda issues</h1>
       {issues.map((issue) => {
         if (issue.done === true) {
           return (
