@@ -20,6 +20,7 @@ function FetchIssue(number) {
       Average: {avgRounded}
       <br />
       Median: {sorted[middle]}
+      
     </div>
   );
 }
