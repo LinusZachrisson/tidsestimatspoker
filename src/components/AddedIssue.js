@@ -21,17 +21,32 @@ const AddedIssue = ({ user, update, handleUpdate }) => {
     setHours(e.target.value);
   };
 
-  const onClick = (e) => {
-    let hour = parseInt(hours);
-    let issueId = e.target.parentNode.id;
-    let hoursArray;
+    const onClick = (e) => {
+        let hour = parseInt(hours);
+        let issueId = e.target.parentNode.id;
+        let hoursArray;
+        let votedArray;
+ 
+        for (let issue in issues) {
+            if (issueId === issues[issue].id) {
+                votedArray = issues[issue].voted;
+                hoursArray = issues[issue].hours;
+                console.log(votedArray);
 
-    for (let issue in issues) {
-      if (issueId === issues[issue].id) {
-        hoursArray = issues[issue].hours;
-        hoursArray.push(hour);
-      }
-    }
+                if(!votedArray.includes(parseInt(user)) || votedArray.length === 0){
+                    hoursArray.push(hour);
+    
+                    votedArray.push(parseInt(user));
+                    console.log("voted");
+                }
+                else{
+                    console.log("hello");
+                }
+
+                
+            }
+        }
+
 
     fetch("http://localhost:5000/issue/" + issueId, {
       method: "PATCH",
@@ -61,6 +76,7 @@ const AddedIssue = ({ user, update, handleUpdate }) => {
         handleUpdate(e.target.id);
       });
   };
+
 
   const onDelete = (e) => {
     fetch("http://localhost:5000/issue/" + e.target.id, {

@@ -5,16 +5,18 @@ const NewIssue = ({ handleUpdate }) => {
   let [header, setHeader] = useState("");
   let [text, setText] = useState("");
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-    let randomKey = rand.generate();
-    let newIssue = {
-      id: randomKey,
-      header: header,
-      description: text,
-      done: false,
-      hours: [],
-    };
+    const onSubmit = (e) => {
+        e.preventDefault();
+        let randomKey = rand.generate();
+        let newIssue = {
+            id: randomKey,
+            header: header,
+            description: text,
+            done: false,
+            voted: [],
+            hours: [],
+        };
+
 
     fetch("http://localhost:5000/issue", {
       method: "POST",
