@@ -1,35 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import FetchIssue from './FetchIssue';
 
-const AddedIssue= ({ user, update }) => {
+const AddedIssue = ({ user, update, handleUpdate }) => {
     const [issues, setIssues] = useState(null);
     const [hours, setHours] = useState(0);
 
     useEffect(() => {
         fetchIssues();
-    },[update]);
+    }, [update]);
 
     const fetchIssues = () => {
         fetch(`http://localhost:5000/issue`)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
                 setIssues(data);
             });
     };
 
     const onChange = (e) => {
         setHours(e.target.value);
-        console.log(hours);
     };
 
     const onClick = (e) => {
-        console.log('klick', hours);
         let hour = parseInt(hours);
         let issueId = e.target.parentNode.id;
         let hoursArray;
         let votedArray;
-        
+ 
         for (let issue in issues) {
             if (issueId === issues[issue].id) {
                 votedArray = issues[issue].voted;
@@ -50,19 +47,52 @@ const AddedIssue= ({ user, update }) => {
             }
         }
 
-        fetch('http://localhost:5000/issue/'+ issueId, {
+        fetch('http://localhost:5000/issue/' + issueId, {
+            method: 'PATCH',
+            body: JSON.stringify({
+                hours: hoursArray,
+            }),
+            headers: {
+                'Content-type': 'application/json',
+            },
+        })
+            .then((response) => response.json())
+            .then((data) => {});
+    };
+
+    const issueDone = (e) => {
+        fetch('http://localhost:5000/issue/' + e.target.id, {
             method: 'PATCH',
             body: JSON.stringify({
             hours: hoursArray,
             voted: votedArray
         }),
-            headers: {
-            'Content-type': 'application/json'}
-        })
-        .then(response => response.json())
-        .then(data => {
 
-        });
+                done: true,
+            }),
+
+            headers: {
+                'Content-type': 'application/json',
+            },
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                handleUpdate(e.target.id);
+            });
+    };
+
+    const onDelete = (e) => {
+        fetch('http://localhost:5000/issue/' + e.target.id, {
+            method: 'DELETE',
+            body: JSON.stringify({}),
+            headers: {
+                'Content-type': 'application/json',
+            },
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                handleUpdate(e.target.id);
+            });
     };
 
     return (
@@ -72,13 +102,25 @@ const AddedIssue= ({ user, update }) => {
                     issues.map((issue) => {
                         if (issue.done === false) {
                             return (
-                                <div key={issue.id} id={issue.id} className='issue-box'>
+                                <div
+                                    key={issue.id}
+                                    id={issue.id}
+                                    className='issue-box'
+                                >
                                     <h1>{issue.header} </h1>
                                     <br />
                                     <h3>{issue.description} </h3>
                                     <br />
                                     {issue.hours.length === 6 ? (
-                                        <FetchIssue issue={issue} />
+                                        <div>
+                                            <FetchIssue issue={issue} />
+                                            <button
+                                                id={issue.id}
+                                                onClick={issueDone}
+                                            >
+                                                Slutförd
+                                            </button>
+                                        </div>
                                     ) : (
                                         <div className='time-container'>
                                             <p>
@@ -93,6 +135,12 @@ const AddedIssue= ({ user, update }) => {
                                                 <button onClick={onClick}>
                                                     Spara
                                                 </button>
+                                                <button
+                                                    id={issue.id}
+                                                    onClick={onDelete}
+                                                >
+                                                    Radera
+                                                </button>
                                             </div>
                                         </div>
                                     )}
@@ -104,6 +152,6 @@ const AddedIssue= ({ user, update }) => {
             </div>
         </div>
     );
-}
+};
 
 export default AddedIssue;

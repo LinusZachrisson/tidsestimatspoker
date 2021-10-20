@@ -1,175 +1,37 @@
 {
-  "issue": [
-    {
-      "id": "1",
-      "header": "Rubrik",
-      "description": "Förklarande text angående issuet",
-      "done": false,
-      "hours": [
-        2,
-        4,
-        3,
-        7
-      ]
-    },
-    {
-      "id": "2",
-      "header": "Rubrik",
-      "description": "Förklarande text angående issuet",
-      "done": false,
-      "hours": [
-        2,
-        4,
-        3,
-        7,
-        9,
-        5
-      ]
-    },
-    {
-      "id": "3",
-      "header": "Rubrik",
-      "description": "Förklarande text angående issuet",
-      "done": false,
-      "hours": [
-        2,
-        4,
-        3,
-        7,
-        9,
-        5
-      ]
-    },
-    {
-      "id": "14",
-      "header": "Rubrik",
-      "description": "Förklarande text angående issuet",
-      "done": false,
-      "hours": [
-        2,
-        4,
-        3,
-        7,
-        9,
-        5
-      ]
-    },
-    {
-      "id": "5",
-      "header": "Rubrik",
-      "description": "Förklarande text angående issuet",
-      "done": false,
-      "hours": [
-        2,
-        4,
-        3,
-        7,
-        9,
-        5
-      ]
-    },
-    {
-      "id": "6",
-      "header": "Rubrik",
-      "description": "Förklarande text angående issuet",
-      "done": false,
-      "hours": [
-        2,
-        4,
-        3,
-        7,
-        9,
-        5
-      ]
-    },
-    {
-      "id": "7",
-      "header": "Rubrik",
-      "description": "Förklarande text angående issuet",
-      "done": false,
-      "hours": [
-        2,
-        4,
-        3,
-        7,
-        9,
-        5
-      ]
-    },
-    {
-      "id": "iOWNHgCp7IXM7zC0",
-      "header": "test",
-      "description": "testtest",
-      "done": false,
-      "hours": 9
-    },
-    {
-      "id": "86WQtnHevDW0LOET",
-      "header": "test2",
-      "description": "test2test2",
-      "done": false,
-      "hours": []
-    },
-    {
-      "id": "rla6nOoGBZ1yKruZ",
-      "header": "test3",
-      "description": "test3test3",
-      "done": false,
-      "hours": []
-    },
-    {
-      "id": "4dThlvb0w1llCDu2",
-      "header": "test4",
-      "description": "test4",
-      "done": false,
-      "voted": [
-        5,
-        4,
-        1,
-        2,
-        3,
-        6
-      ],
-      "hours": [
-        2,
-        3,
-        3,
-        3,
-        4,
-        2
-      ]
-    }
-  ],
-  "users": [
-    {
-      "id": 1,
-      "firstname": "Durre shewar",
-      "lastname": "Malik"
-    },
-    {
-      "id": 2,
-      "firstname": "Toni",
-      "lastname": "Halmetoja"
-    },
-    {
-      "id": 3,
-      "firstname": "Johannes",
-      "lastname": "Fjellborg"
-    },
-    {
-      "id": 4,
-      "firstname": "Mathilda",
-      "lastname": "Pettersson"
-    },
-    {
-      "id": 5,
-      "firstname": "Judith",
-      "lastname": "Gammelli"
-    },
-    {
-      "id": 6,
-      "firstname": "Linus",
-      "lastname": "Zachrisson"
-    }
-  ]
+
+   "issue": [
+    ],
+    "users": [
+        {
+            "id": 1,
+            "firstname": "Durre shewar",
+            "lastname": "Malik"
+        },
+        {
+            "id": 2,
+            "firstname": "Toni",
+            "lastname": "Halmetoja"
+        },
+        {
+            "id": 3,
+            "firstname": "Johannes",
+            "lastname": "Fjellborg"
+        },
+        {
+            "id": 4,
+            "firstname": "Mathilda",
+            "lastname": "Pettersson"
+        },
+        {
+            "id": 5,
+            "firstname": "Judith",
+            "lastname": "Gammelli"
+        },
+        {
+            "id": 6,
+            "firstname": "Linus",
+            "lastname": "Zachrisson"
+        }
+    ]
 }

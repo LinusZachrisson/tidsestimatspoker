@@ -6,11 +6,11 @@ import React, { useState } from 'react';
 
 function App() {
     const [user, setUser] = useState(null);
-    const [update, setUpdate] = useState("undefined");
+    const [update, setUpdate] = useState('undefined');
 
     const handleUpdate = async (evt) => {
         setUpdate(evt.id);
-    }
+    };
 
     return (
         <div>
@@ -18,8 +18,12 @@ function App() {
                 <FirstPage sendId={(id) => setUser(id)} />
             ) : (
                 <div className='content-container'>
-                    <AddedIssue user={user} update={update}/>
-                    <NewIssue handleUpdate={handleUpdate}/>
+                    <AddedIssue
+                        user={user}
+                        update={update}
+                        handleUpdate={handleUpdate}
+                    />
+                    <NewIssue handleUpdate={handleUpdate} />
                 </div>
             )}
         </div>
