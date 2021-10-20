@@ -5,6 +5,7 @@ const AddedIssue = ({ user, update, handleUpdate }) => {
     const [issues, setIssues] = useState(null);
     const [hours, setHours] = useState(0);
     const [vote, setVote] = useState();
+    const [realTime, setRealTime] = useState(0);
 
     useEffect(() => {
         fetchIssues();
@@ -20,6 +21,7 @@ const AddedIssue = ({ user, update, handleUpdate }) => {
 
     const onChange = (e) => {
         setHours(e.target.value);
+        console.log(e.target.value);
     };
 
     const onClick = (e) => {
@@ -83,6 +85,8 @@ const AddedIssue = ({ user, update, handleUpdate }) => {
             .then((data) => {
                 handleUpdate(e.target.id);
             });
+
+            console.log("slutförd");
     };
 
     const onDelete = (e) => {
@@ -98,6 +102,40 @@ const AddedIssue = ({ user, update, handleUpdate }) => {
                 handleUpdate(e.target.id);
             });
     };
+
+    const realH = (e) => {
+        e.preventDefault();
+        setRealTime(e.target.value);
+    }
+
+    const actualHour = (e) => {
+        e.preventDefault();
+
+        let realHour = parseInt(realTime);
+        let issueId = e.target.id;       
+        let realHoursArray;
+
+        for (let issue in issues) {
+            if (issueId === issues[issue].id) {
+                realHoursArray = issues[issue].actualTime;
+                realHoursArray.push(realHour);
+            }
+        }
+
+        fetch('http://localhost:5000/issue/' + issueId, {
+            method: 'PATCH',
+            body: JSON.stringify({
+                actualTime: realHoursArray
+            }),
+            headers: {
+                'Content-type': 'application/json',
+            },
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                
+            });
+    }
 
     return (
         <div className='left-container'>
@@ -119,6 +157,16 @@ const AddedIssue = ({ user, update, handleUpdate }) => {
                                     {issue.hours.length === 6 ? (
                                         <div>
                                             <FetchIssue issue={issue} />
+                                            <p>
+                                                Timmar det verkligen tog: {" "}
+                                                <input type="number" onChange={realH}/>
+                                                <button 
+                                                id={issue.id}
+                                                onClick={actualHour}
+                                                >
+                                                    Spara rätt tid
+                                                </button>
+                                            </p>
                                             <button
                                                 id={issue.id}
                                                 onClick={issueDone}

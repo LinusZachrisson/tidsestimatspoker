@@ -39,6 +39,7 @@ const FinishedIssues = ({ update, handleUpdate }) => {
               <br />
               <div>
                 <FetchIssue issue={issue} />
+                {/* Adding actual hours here */}
                 <button id={issue.id} onClick={onDelete}>
                   Radera
                 </button>
