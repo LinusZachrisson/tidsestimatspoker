@@ -19,7 +19,11 @@ const FinishedIssues = ({ update, handleUpdate }) => {
       headers: {
         "Content-type": "application/json",
       },
-    });
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        handleUpdate(e.target.id);
+      });
   };
 
   return (

@@ -5,35 +5,54 @@
       "header": "Rubrik",
       "description": "Förklarande text angående issuet",
       "done": false,
-      "hours": [2, 4, 3, 7]
+      "hours": [
+        2,
+        4,
+        3,
+        7
+      ]
     },
     {
       "id": "2",
       "header": "Rubrik",
       "description": "Förklarande text angående issuet",
       "done": false,
-      "hours": [2, 4, 3, 7, 9, 5]
+      "hours": [
+        2,
+        4,
+        3,
+        7,
+        9,
+        5
+      ]
     },
     {
-      "id": "14",
+      "id": "3",
       "header": "Rubrik",
       "description": "Förklarande text angående issuet",
       "done": true,
-      "hours": [2, 4, 3, 7, 9, 5]
+      "hours": [
+        2,
+        4,
+        3,
+        7,
+        9,
+        25
+      ]
     },
     {
-      "id": "5",
+      "id": "4",
       "header": "Rubrik",
       "description": "Förklarande text angående issuet",
       "done": true,
-      "hours": [2, 4, 3, 7, 9, 5]
-    },
-    {
-      "id": "6",
-      "header": "Rubrik",
-      "description": "Förklarande text angående issuet",
-      "done": true,
-      "hours": [2, 4, 3, 7, 9, 5]
+      "hours": [
+        2,
+        4,
+        3,
+        7,
+        9,
+        15
+      ]
     }
   ],
   "users": [

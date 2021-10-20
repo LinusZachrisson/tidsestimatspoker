@@ -21,7 +21,7 @@ function App() {
         <div className="content-container">
           <AddedIssue user={user} update={update} handleUpdate={handleUpdate} />
           <NewIssue handleUpdate={handleUpdate} />
-          <FinishedIssues />
+          <FinishedIssues update={update} handleUpdate={handleUpdate} />
         </div>
       )}
     </div>
