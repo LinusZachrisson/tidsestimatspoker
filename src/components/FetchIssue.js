@@ -24,6 +24,7 @@ function FetchIssue(number) {
       Median: {sorted[middle]}
       <br />
       Time difference: {time}
+      
     </div>
   );
 }

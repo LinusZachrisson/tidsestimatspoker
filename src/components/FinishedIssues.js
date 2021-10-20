@@ -26,6 +26,7 @@ const FinishedIssues = ({ update, handleUpdate }) => {
       });
   };
 
+
   return (
     <div className="finished-issue-container">
       <h1 className="container-heading">Slutförda issues</h1>
@@ -36,10 +37,8 @@ const FinishedIssues = ({ update, handleUpdate }) => {
               <h1>{issue.header}</h1>
               <br />
               <h3>{issue.description}</h3>
-              <br />
               <div>
                 <FetchIssue issue={issue} />
-                {/* Adding actual hours here */}
                 <button id={issue.id} onClick={onDelete}>
                   Radera
                 </button>
