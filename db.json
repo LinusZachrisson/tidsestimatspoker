@@ -1,37 +1,78 @@
 {
-   "issue": [
-    ],
-    "users": [
-        {
-            "id": 1,
-            "firstname": "Durre shewar",
-            "lastname": "Malik"
-        },
-        {
-            "id": 2,
-            "firstname": "Toni",
-            "lastname": "Halmetoja"
-        },
-        {
-            "id": 3,
-            "firstname": "Johannes",
-            "lastname": "Fjellborg"
-        },
-        {
-            "id": 4,
-            "firstname": "Mathilda",
-            "lastname": "Pettersson"
-        },
-        {
-            "id": 5,
-            "firstname": "Judith",
-            "lastname": "Gammelli"
-        },
-        {
-            "id": 6,
-            "firstname": "Linus",
-            "lastname": "Zachrisson"
-        }
-    ]
+  "issue": [
+    {
+      "id": "PNyBXGcOXXyeB19B",
+      "header": "Hejsan",
+      "description": "Padel",
+      "done": false,
+      "voted": [
+        3,
+        2,
+        1,
+        4,
+        5,
+        6
+      ],
+      "hours": [
+        3,
+        3,
+        3,
+        4,
+        1,
+        5
+      ]
+    },
+    {
+      "id": "eJS5JOgHhrVTwoix",
+      "header": "Nytt issue",
+      "description": "test test",
+      "done": false,
+      "voted": [
+        4
+      ],
+      "hours": [
+        3
+      ]
+    },
+    {
+      "id": "eaJXvUJEdXG662GV",
+      "header": "Nytt issue2",
+      "description": "test test test",
+      "done": false,
+      "voted": [],
+      "hours": []
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstname": "Durre shewar",
+      "lastname": "Malik"
+    },
+    {
+      "id": 2,
+      "firstname": "Toni",
+      "lastname": "Halmetoja"
+    },
+    {
+      "id": 3,
+      "firstname": "Johannes",
+      "lastname": "Fjellborg"
+    },
+    {
+      "id": 4,
+      "firstname": "Mathilda",
+      "lastname": "Pettersson"
+    },
+    {
+      "id": 5,
+      "firstname": "Judith",
+      "lastname": "Gammelli"
+    },
+    {
+      "id": 6,
+      "firstname": "Linus",
+      "lastname": "Zachrisson"
+    }
+  ]
 }
-
