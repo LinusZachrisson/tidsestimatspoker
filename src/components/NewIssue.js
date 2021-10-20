@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-var rand = require('random-key');
+import React, { useState } from "react";
+var rand = require("random-key");
 
-const NewIssue = ({handleUpdate}) => {
-    let [header, setHeader] = useState('');
-    let [text, setText] = useState('');
+const NewIssue = ({ handleUpdate }) => {
+  let [header, setHeader] = useState("");
+  let [text, setText] = useState("");
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -17,54 +17,55 @@ const NewIssue = ({handleUpdate}) => {
             hours: [],
         };
 
-        fetch('http://localhost:5000/issue', {
-            method: 'POST',
-            headers: { 'Content-type': 'application/json' },
-            body: JSON.stringify(newIssue),
-        })
-            .then((res) => res.json())
-            .then((data) => {})
-            .catch((err) => console.log(err));
 
-        setHeader('');
-        setText('');
-        handleUpdate(newIssue);
-    };
+    fetch("http://localhost:5000/issue", {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify(newIssue),
+    })
+      .then((res) => res.json())
+      .then((data) => {})
+      .catch((err) => console.log(err));
 
-    const onChangeH = (e) => {
-        setHeader(e.target.value);
-    };
+    setHeader("");
+    setText("");
+    handleUpdate(newIssue);
+  };
 
-    const onChangeT = (e) => {
-        setText(e.target.value);
-    };
+  const onChangeH = (e) => {
+    setHeader(e.target.value);
+  };
 
-    return (
-        <section className='right-container'>
-            <div className='newissue-container'>
-                <h1>Nytt Issue</h1>
-                <form onSubmit={onSubmit}>
-                    <input
-                        type='text'
-                        placeholder='Rubrik'
-                        name='header'
-                        onChange={onChangeH}
-                        value={header}
-                    />
-                    <br />
-                    <input
-                        type='text'
-                        placeholder='Beskrivning'
-                        name='text'
-                        onChange={onChangeT}
-                        value={text}
-                    />
-                    <br />
-                    <button type='submit'>Lägg till</button>
-                </form>
-            </div>
-        </section>
-    );
-}
+  const onChangeT = (e) => {
+    setText(e.target.value);
+  };
+
+  return (
+    <section className="right-container">
+      <div className="newissue-container">
+        <h1>Nytt Issue</h1>
+        <form onSubmit={onSubmit}>
+          <input
+            type="text"
+            placeholder="Rubrik"
+            name="header"
+            onChange={onChangeH}
+            value={header}
+          />
+          <br />
+          <input
+            type="text"
+            placeholder="Beskrivning"
+            name="text"
+            onChange={onChangeT}
+            value={text}
+          />
+          <br />
+          <button type="submit">Lägg till</button>
+        </form>
+      </div>
+    </section>
+  );
+};
 
 export default NewIssue;
