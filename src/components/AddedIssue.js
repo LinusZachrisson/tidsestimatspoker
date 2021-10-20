@@ -25,11 +25,25 @@ const AddedIssue = ({ user, update, handleUpdate }) => {
         let hour = parseInt(hours);
         let issueId = e.target.parentNode.id;
         let hoursArray;
-
+        let votedArray;
+ 
         for (let issue in issues) {
             if (issueId === issues[issue].id) {
+                votedArray = issues[issue].voted;
                 hoursArray = issues[issue].hours;
-                hoursArray.push(hour);
+                console.log(votedArray);
+
+                if(!votedArray.includes(parseInt(user)) || votedArray.length === 0){
+                    hoursArray.push(hour);
+    
+                    votedArray.push(parseInt(user));
+                    console.log("voted");
+                }
+                else{
+                    console.log("hello");
+                }
+
+                
             }
         }
 
@@ -50,8 +64,13 @@ const AddedIssue = ({ user, update, handleUpdate }) => {
         fetch('http://localhost:5000/issue/' + e.target.id, {
             method: 'PATCH',
             body: JSON.stringify({
+            hours: hoursArray,
+            voted: votedArray
+        }),
+
                 done: true,
             }),
+
             headers: {
                 'Content-type': 'application/json',
             },
