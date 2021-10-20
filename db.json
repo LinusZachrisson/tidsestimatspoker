@@ -4,26 +4,15 @@
       "id": "eJS5JOgHhrVTwoix",
       "header": "Nytt issue",
       "description": "test test",
-      "done": false,
+      "done": true,
       "voted": [
-        4,
-        1,
-        2,
-        3,
-        5,
-        6
+
       ],
       "hours": [
-        3,
-        4,
-        5,
-        7,
-        2,
-        5
+
       ],
       "actualTime": [
-        4,
-        3
+  
       ]
     },
     {
@@ -31,8 +20,12 @@
       "header": "Nytt issue2",
       "description": "test test test",
       "done": false,
-      "voted": [],
-      "hours": [],
+      "voted": [
+        
+      ],
+      "hours": [
+        
+      ],
       "actualTime": []
     },
     {
@@ -41,20 +34,10 @@
       "description": "testing again",
       "done": true,
       "voted": [
-        1,
-        2,
-        3,
-        4,
-        6,
-        5
+
       ],
       "hours": [
-        1,
-        1,
-        4,
-        5,
-        5,
-        5
+
       ],
       "actualTime": []
     }
